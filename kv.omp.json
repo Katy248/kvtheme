@@ -1,0 +1,86 @@
+{  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "newline": false,
+      "alignment": "left",
+      "overflow": "hide",
+      "segments": [
+        {
+          "type": "time",
+          "foreground": "yellow",
+          "template": "({{ .CurrentDate | date .Format }})",
+          "properties": {
+            "time_format": "15:04"
+          }
+        },
+        {
+          "type": "path",
+          "foreground": "cyan",
+          "properties": {
+            "style": "agnoster_short"
+          }
+        },
+        {
+          "type": "git",
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }} ",
+          "properties": {
+            "branch_max_length": 25,
+            "fetch_status": true
+          }
+        },
+        {
+          "style": "plain",
+          "foreground": "green",
+          "type": "text",
+          "template": "->"
+        }
+      ]
+    }
+  ],
+  "final_space": true,
+  "version": 2,
+  "accent_color": "magenta",
+  "some": {
+    "alignment": "left",
+    "segments": [
+      {
+        "foreground": "#E36464",
+        "style": "plain",
+        "template": "@{{ .UserName }} ",
+        "type": "session"
+      },
+      {
+        "foreground": "#62ED8B",
+        "style": "plain",
+        "template": "\u279c",
+        "type": "text"
+      },
+      {
+        "foreground": "#56B6C2",
+        "properties": {
+          "style": "folder"
+        },
+        "style": "plain",
+        "template": " /{{ .Path }}",
+        "type": "path"
+      },
+      {
+        "foreground": "#D4AAFC",
+        "properties": {
+          "branch_icon": ""
+        },
+        "style": "plain",
+        "template": " <#DDB15F>git(</>{{ .HEAD }}<#DDB15F>)</>",
+        "type": "git"
+      },
+      {
+        "foreground": "#DCB977",
+        "style": "plain",
+        "template": " \uf119",
+        "type": "exit"
+      }
+    ],
+    "type": "prompt"
+  }
+}
