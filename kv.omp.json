@@ -1,4 +1,5 @@
-{  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
       "type": "prompt",
@@ -8,30 +9,27 @@
       "segments": [
         {
           "type": "time",
-          "foreground": "yellow",
-          "template": "({{ .CurrentDate | date .Format }})",
+          "foreground": "#FF97BB",
+          "template": "({{ .CurrentDate | date .Format }}) ",
           "properties": {
             "time_format": "15:04"
           }
         },
         {
+          "template": "{{ .UserName }}@{{ .HostName }}:",
+          "style": "plain",
+          "type": "session",
+          "foreground": "white"
+        },
+        {
           "type": "path",
-          "foreground": "cyan",
           "properties": {
             "style": "agnoster_short"
           }
         },
         {
-          "type": "git",
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }} ",
-          "properties": {
-            "branch_max_length": 25,
-            "fetch_status": true
-          }
-        },
-        {
           "style": "plain",
-          "foreground": "green",
+          "foreground": "#FF97BB",
           "type": "text",
           "template": "->"
         }
