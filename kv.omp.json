@@ -3,7 +3,7 @@
   "blocks": [
     {
       "type": "prompt",
-      "newline": false,
+      "newline": true,
       "alignment": "left",
       "overflow": "hide",
       "segments": [
@@ -16,22 +16,30 @@
           }
         },
         {
-          "template": "{{ .UserName }}@{{ .HostName }}:",
+          "template": "{{ .UserName }}@{{ .HostName }}",
           "style": "plain",
           "type": "session",
           "foreground": "white"
         },
         {
           "type": "path",
+          "foreground": "#FF97BB",
           "properties": {
-            "style": "agnoster_short"
+            "style": "full"
           }
-        },
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "newline": true,
+      "alignment": "left",
+      "segments": [
         {
           "style": "plain",
           "foreground": "#FF97BB",
           "type": "text",
-          "template": "->"
+          "template": "-->"
         }
       ]
     }
