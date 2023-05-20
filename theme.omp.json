@@ -7,7 +7,6 @@
       "alignment": "left",
       "overflow": "hide",
       "segments": [
-        
         {
           "template": "{{ .UserName }}@{{ .HostName }}",
           "style": "plain",
@@ -25,20 +24,8 @@
     },
     {
       "type": "prompt",
-      "newline": true,
-      "alignment": "left",
-      "segments": [
-        {
-          "style": "plain",
-          "foreground": "#FF97BB",
-          "type": "text",
-          "template": "-->"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
       "alignment": "right",
+      "newline": false,
       "segments": [
         {
           "type": "time",
@@ -47,6 +34,19 @@
           "properties": {
             "time_format": "15:04"
           }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "newline": true,
+      "alignment": "left",
+      "segments": [
+        {
+          "style": "plain",
+          "foreground": "#FF97BB",
+          "type": "text",
+          "template": "-->"
         }
       ]
     }
