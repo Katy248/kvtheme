@@ -7,14 +7,7 @@
       "alignment": "left",
       "overflow": "hide",
       "segments": [
-        {
-          "type": "time",
-          "foreground": "#FF97BB",
-          "template": "({{ .CurrentDate | date .Format }}) ",
-          "properties": {
-            "time_format": "15:04"
-          }
-        },
+        
         {
           "template": "{{ .UserName }}@{{ .HostName }}",
           "style": "plain",
@@ -41,6 +34,20 @@
           "type": "text",
           "template": "-->"
         }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "foreground": "#FF97BB",
+          "template": "({{ .CurrentDate | date .Format }}) ",
+          "properties": {
+            "time_format": "15:04"
+          }
+        },
       ]
     }
   ],
