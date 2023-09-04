@@ -59,6 +59,10 @@
       ]
     }
   ],
+  "transient_prompt": {
+          "foreground": "#FF97BB",
+          "template": "-->"
+  },
   "final_space": true,
   "version": 2
 }
