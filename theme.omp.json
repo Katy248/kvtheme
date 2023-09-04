@@ -61,7 +61,7 @@
   ],
   "transient_prompt": {
           "foreground": "#FF97BB",
-          "template": "-->"
+          "template": "({{ .CurrentDate | date .Format }}) --> "
   },
   "final_space": true,
   "version": 2
