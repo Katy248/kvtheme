@@ -20,7 +20,7 @@ Also don't forget about:
 
 -   Nerd fonts
 
-## Usage
+## Installation
 
 Clone repository
 
