@@ -61,7 +61,7 @@
   ],
   "transient_prompt": {
           "foreground": "#FF97BB",
-          "template": "({{ .Shell }}) --> ",
+          "template": "({{ .CurrentDate | date .Format }}) --> ",
           "properties": {
             "time_format": "15:04"
     }
