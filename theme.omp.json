@@ -7,6 +7,14 @@
       "alignment": "left",
       "overflow": "hide",
       "segments": [
+        /* {
+          "type": "time",
+          "foreground": "#FF97BB",
+          "template": "({{ .CurrentDate | date .Format }}) ",
+          "properties": {
+            "time_format": "15:04"
+          }
+        }, */
         {
           "template": "{{ .UserName }}@{{ .HostName }}",
           "style": "plain",
@@ -30,7 +38,7 @@
         }
       ]
     },
-    {
+    /* {
       "type": "prompt",
       "alignment": "right",
       "newline": false,
@@ -44,7 +52,7 @@
           }
         }
       ]
-    },
+    }, */
     {
       "type": "prompt",
       "newline": true,
@@ -61,7 +69,7 @@
   ],
   "transient_prompt": {
           "foreground": "#FF97BB",
-          "template": "({{ .CurrentDate | date .Format }}) --> ",
+          "template": "--> ",
           "properties": {
             "time_format": "15:04"
     }
