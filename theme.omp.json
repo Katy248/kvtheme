@@ -1,13 +1,13 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "blocks": [
-    {
-      "type": "prompt",
-      "newline": true,
-      "alignment": "left",
-      "overflow": "hide",
-      "segments": [
-        /* {
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "type": "prompt",
+            "newline": true,
+            "alignment": "left",
+            "overflow": "hide",
+            "segments": [
+                /* {
           "type": "time",
           "foreground": "#FF97BB",
           "template": "({{ .CurrentDate | date .Format }}) ",
@@ -15,30 +15,29 @@
             "time_format": "15:04"
           }
         }, */
-        {
-          "template": "{{ .UserName }}@{{ .HostName }}",
-          "style": "plain",
-          "type": "session",
-          "foreground": "white"
+                {
+                    "template": "{{ .UserName }}@{{ .HostName }}",
+                    "style": "plain",
+                    "type": "session",
+                    "foreground": "white"
+                },
+                {
+                    "type": "path",
+                    "foreground": "#FF97BB",
+                    "properties": {
+                        "style": "full"
+                    }
+                },
+                {
+                    "type": "git",
+                    "template": " git: {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+                    "properties": {
+                        "style": "full"
+                    }
+                }
+            ]
         },
-        {
-          "type": "path",
-          "foreground": "#FF97BB",
-          "properties": {
-            "style": "full"
-          }
-          
-        },
-        {
-          "type": "git",
-          "template": " git: {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
-          "properties": {
-            "style": "full"
-          }
-        }
-      ]
-    },
-    /* {
+        /* {
       "type": "prompt",
       "alignment": "right",
       "newline": false,
@@ -53,27 +52,28 @@
         }
       ]
     }, */
-    {
-      "type": "prompt",
-      "newline": true,
-      "alignment": "left",
-      "segments": [
         {
-          "style": "plain",
-          "foreground": "#FF97BB",
-          "type": "text",
-          "template": "-->"
+            "type": "prompt",
+            "newline": true,
+            "alignment": "left",
+            "segments": [
+                {
+                    "style": "plain",
+                    "foreground": "#FF97BB",
+                    "type": "text",
+                    "template": "-->"
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "transient_prompt": {
-          "foreground": "#FF97BB",
-          "template": "--> ",
-          "properties": {
-            "time_format": "15:04"
-    }
-  },
-  "final_space": true,
-  "version": 2
+    ],
+    "secondary_prompt": {
+        "foreground": "#FF97BB",
+        "template": "|-> "
+    },
+    "transient_prompt": {
+        "foreground": "#FF97BB",
+        "template": "--> "
+    },
+    "final_space": true,
+    "version": 2
 }
